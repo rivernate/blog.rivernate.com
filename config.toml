@@ -1,22 +1,49 @@
-
-theme="polymer"
 baseURL = "https://blog.rivernate.com/"
-languageCode = "en-us"
+languageCode = "en"
 title = "Nathan Mills Blog"
-MetaDataFormat = "toml"
-paginate = 10 # optional
-disqusShortname = "blog-rivernate-com" # optional
+theme = "hucore"
+
+disqusShortname = "blog-rivernate-com"
+googleAnalytics = "UA-93932964-1"
 copyright = "© Nathan Mills and rivernate.com, 2017. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Nathan Mills and rivernate.com with appropriate and specific direction to the original content."
 
-[params]
-  author = "Nathan Mills"
-  #photo = "images/photo.png" # optional
-  #profile = "images/profile.png" # optional
-  #cover = "images/cover.png" # optional
-  twitter = "rivernate" # optional
-  github = "rivernate" # optional
-  linkedin = "nathan-mills" # optional
-  googleAnalyticsUserID = "UA-93932964-1" # optional
+[taxonomies]
+tag = "tags"
+category = "categories"
 
-[permalinks]
-  post = "/:year/:month/:day/:filename/" # optional
+[params]
+description = "Nathan Mills's blog"
+keywords = []
+author = "Nathan Mills"
+sharingicons = true
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/rivernate"
+fa_icon = "fa-github"
+
+#[[params.social]]
+#url = "https://gitlab.com/mgjohansen"
+#fa_icon = "fa-gitlab"
+
+[[params.social]]
+url = "https://twitter.com/rivernate"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://linkedin.com/in/nathan-mills"
+fa_icon = "fa-linkedin-square"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
+
+[[params.socialshare]]
+url = "https://linkedin.com/in/nathan-mills"
+fa_icon = "fa-linkedin-square"
+
+
+#copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"

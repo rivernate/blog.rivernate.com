@@ -1,4 +1,4 @@
-baseURL = "https://blog.rivernate.com/"
+baseURL = "https://blog.rivernate.com"
 languageCode = "en"
 title = "Nathan Mills Blog"
 theme = "hucore"

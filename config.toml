@@ -1,0 +1,22 @@
+
+theme="polymer"
+baseURL = "https://blog.rivernate.com/"
+languageCode = "en-us"
+title = "Nathan Mills Blog"
+MetaDataFormat = "toml"
+paginate = 10 # optional
+disqusShortname = "blog-rivernate-com" # optional
+copyright = "© Nathan Mills and rivernate.com, 2017. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Nathan Mills and rivernate.com with appropriate and specific direction to the original content."
+
+[params]
+  author = "Nathan Mills"
+  #photo = "images/photo.png" # optional
+  #profile = "images/profile.png" # optional
+  #cover = "images/cover.png" # optional
+  twitter = "rivernate" # optional
+  github = "rivernate" # optional
+  linkedin = "nathan-mills" # optional
+  googleAnalyticsUserID = "UA-93932964-1" # optional
+
+[permalinks]
+  post = "/:year/:month/:day/:filename/" # optional

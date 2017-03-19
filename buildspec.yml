@@ -20,5 +20,6 @@ phases:
       - hugo
   post_build:
     commands:
+      - aws configure set preview.cloudfront true
       - aws s3 sync --delete public s3://blog.rivernate.com --cache-control max-age=3600
-      #- aws cloudfront create-invalidation --distribution-id E2NJ1XSA5UXEGC --paths /index.html / /page/*
+      - aws cloudfront create-invalidation --distribution-id E2NJ1XSA5UXEGC --paths /index.html / /page/*

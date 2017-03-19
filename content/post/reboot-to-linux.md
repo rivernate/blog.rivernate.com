@@ -27,24 +27,32 @@ Here is the batch file I came up with:
 {{< gist rivernate 37efb7508629bfec313710f2ca07ecea >}}
 
 This just turns of echoing commands in the file:
+
 {{< highlight batch>}}
 @echo off
 {{</ highlight>}}
 
 This checks to see if we are running as an admin, and if not prompts to run as an admin:
+
 {{< highlight batch>}}
 if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit)
 {{</ highlight>}}
 
 This is where the magic happens:
+
 {{< highlight batch>}}
 bcdedit /set {fwbootmgr} bootsequence {uuid}
 {{</ highlight>}}
+
 We are using [bcdedit](https://technet.microsoft.com/en-us/library/cc709667(v=ws.10).aspx)
 to change the bootsequence temporarily to boot Arch instead of Windows. You will need to 
 change the **"{uuid}"** to the correct uuid of your device. In order to find this you can 
 run the following from an admin command prompt: 
-{{< highlight batch>}} bcdedit /enum firmware {{</ highlight>}}
+
+{{< highlight batch>}}
+bcdedit /enum firmware
+{{</ highlight>}}
+
 You should get something that looks like this:
 {{< figure src="/images/reboot-to-linux/bcdedit-list.png" title="List Firmware Boot Devices" >}}
 In my case the Firmware Application is my Arch install, So I will replace 
@@ -55,7 +63,9 @@ The **bootsequence** option:
 >Specifies a one-time display order to be used for the next boot. This command is similar to the /displayorder option, except that it is used only the next time the computer starts. Afterwards, the computer reverts to the original display order.
 
 The final step is to reboot:
-{{< highlight batch>}} shutdown /r /t 0 {{</ highlight>}}
+{{< highlight batch>}}
+shutdown /r /t 0
+{{</ highlight>}}
 
 Now I have a simple script that when I click on it will reboot me directly into my Arch Linux install, without
 making any permanent changes to my boot setup. For some niceties I put the actual script in a folder in my 

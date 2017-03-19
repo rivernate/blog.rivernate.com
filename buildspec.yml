@@ -9,8 +9,6 @@ environment_variables:
 phases:
   install:
     commands:
-      - pip install Pygments
-      - apt-get install curl
       - curl -Ls https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -o /tmp/hugo.tar.gz
       - echo "${HUGO_SHA256}  /tmp/hugo.tar.gz" | sha256sum -c -
       - tar xf /tmp/hugo.tar.gz -C /tmp

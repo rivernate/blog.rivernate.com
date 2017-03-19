@@ -6,7 +6,6 @@ theme = "hucore"
 disqusShortname = "blog-rivernate-com"
 googleAnalytics = "UA-93932964-1"
 copyright = "© Nathan Mills and rivernate.com, 2017. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Nathan Mills and rivernate.com with appropriate and specific direction to the original content."
-pygmentsStyle = "friendly"
 
 [taxonomies]
 tag = "tags"

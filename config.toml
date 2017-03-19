@@ -19,7 +19,7 @@ sharingicons = true
 
 [params.highlight]
 style = "github"
-languages = ["go", "dockerfile"]
+languages = ["dos"]
 
 [[params.social]]
 url = "https://github.com/rivernate"

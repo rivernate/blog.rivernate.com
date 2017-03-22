@@ -26,7 +26,7 @@ after the next one should revert back to Windows 10.
 Here is the batch file I came up with:
 {{< gist rivernate 37efb7508629bfec313710f2ca07ecea >}}
 
-This just turns of echoing commands in the file:
+This just turns off echoing commands in the file:
 
 ~~~bat
 @echo off

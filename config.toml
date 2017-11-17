@@ -1,42 +1,35 @@
 baseURL = "https://blog.rivernate.com"
-languageCode = "en"
 title = "Nathan Mills Blog"
-theme = "hucore"
 
-disqusShortname = "blog-rivernate-com"
+theme = "beautifulhugo"
+DefaultContentLanguage = "en"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+
+#disqusShortname = "blog-rivernate-com"
 googleAnalytics = "UA-93932964-1"
-copyright = "© Nathan Mills and rivernate.com, 2017. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Nathan Mills and rivernate.com with appropriate and specific direction to the original content."
-
-[taxonomies]
-tag = "tags"
-category = "categories"
+#copyright = "© Nathan Mills and rivernate.com, 2017. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Nathan Mills and rivernate.com with appropriate and specific direction to the original content."
 
 [params]
-description = "Nathan Mills's blog"
-keywords = []
-author = "Nathan Mills"
-sharingicons = true
+  subtitle = "Nathan Mills's blog"
+  useChroma = true
+  rss = true
 
-[params.highlight]
-style = "github"
-languages = ["dos"]
+[Author]
+  name = "Nathan Mills"
+  website = "https://rivernate.com"
+  #email = "nate@rivernate.com"
+  github = "rivernate"
+  twitter = "rivernate"
+  linkedin = "nathan-mills"
 
-[[params.social]]
-url = "https://github.com/rivernate"
-fa_icon = "fa-github"
 
-[[params.social]]
-url = "https://twitter.com/rivernate"
-fa_icon = "fa-twitter"
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
 
-[[params.social]]
-url = "https://linkedin.com/in/nathan-mills"
-fa_icon = "fa-linkedin-square"
-
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"
-
-[[params.socialshare]]
-url = "https://linkedin.com/in/nathan-mills"
-fa_icon = "fa-linkedin-square"
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3

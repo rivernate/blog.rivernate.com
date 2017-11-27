@@ -13,7 +13,6 @@ steps:
     env:
       - HUGO_ENV=production
     waitFor:
-      - cat
       - submoduleUpdate
   - name: gcr.io/cloud-builders/gsutil
     args: ["-m", "rsync", "-rcd", "public/", "gs://blog.rivernate.com"]

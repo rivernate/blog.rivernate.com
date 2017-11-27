@@ -1,6 +1,19 @@
 steps:
+  - name: gcr.io/cloud-builders/git
+    id: submoduleInit
+    args: ['submodule', 'init']
+  - name: gcr.io/cloud-builders/git
+    id: submoduleUpdate
+    args: ['submodule', 'update']
+    waitFor:
+      - submoduleInit
   - name: cibuilds/hugo:0.31
+    id: hugo
     args: ['hugo', '-v', '--cleanDestinationDir']
+    env:
+      - HUGO_ENV=production
+    waitFor:
+      - cat
+      - submoduleUpdate
   - name: gcr.io/cloud-builders/gsutil
     args: ["-m", "rsync", "-rcd", "public/", "gs://blog.rivernate.com"]
-    

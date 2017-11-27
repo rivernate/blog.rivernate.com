@@ -1,6 +1,6 @@
 steps:
   - name: cibuilds/hugo:0.31
-    args: ['hugo']
+    args: ['hugo', '-v', '--cleanDestinationDir']
   - name: gcr.io/cloud-builders/gsutil
     args: ["-m", "rsync", "-rcd", "public/", "gs://blog.rivernate.com"]
-
+    

@@ -1,4 +1,4 @@
-baseURL = "https://blog.rivernate.com"
+baseURL = "https://blog.rivernate.com/"
 title = "Nathan Mills Blog"
 
 theme = "beautifulhugo"

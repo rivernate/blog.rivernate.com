@@ -17,8 +17,8 @@ phases:
       - rm -rf /tmp/hugo*
   pre_build:
     commands:
-      - submodule init
-      - submodule update
+      - git submodule init
+      - git submodule update
   build:
     commands:
       - hugo

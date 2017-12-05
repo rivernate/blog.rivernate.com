@@ -5,6 +5,7 @@ environment_variables:
     AWS_DEFAULT_REGION: "us-east-1"
     HUGO_VERSION: "0.31.1"
     HUGO_SHA256: "2ec6fd0493fa246a5747b0f1875d94affaaa30f11715f26abcbe1bc91c940716"
+    HUGO_ENV: "production"
 
 phases:
   install:
@@ -14,6 +15,10 @@ phases:
       - tar xf /tmp/hugo.tar.gz -C /tmp
       - mv /tmp/hugo_${HUGO_VERSION}_linux_amd64/hugo_${HUGO_VERSION}_linux_amd64 /usr/bin/hugo
       - rm -rf /tmp/hugo*
+  pre_build:
+    commands:
+      - submodule init
+      - submodule update
   build:
     commands:
       - hugo

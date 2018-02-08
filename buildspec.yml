@@ -20,7 +20,7 @@ phases:
       - rmdir themes/beautifulhugo     
       - git init
       - git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo
-      - (cd themes/beautifulhugo/ && git reset --hard 7cdd0e0)
+      - (cd themes/beautifulhugo/ && git reset --hard b2ea7d9)
   build:
     commands:
       - hugo
